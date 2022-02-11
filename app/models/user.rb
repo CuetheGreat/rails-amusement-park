@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def mood
-    nausea > happiness ? 'sad' : 'happy'
+    nausea >= happiness ? 'sad' : 'happy'
   end
 
   def update_user(attraction)

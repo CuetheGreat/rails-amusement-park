@@ -1,0 +1,11 @@
+<h1><%= @user.name%></h1>
+<h3> User Statistics:</h3>
+<ul>
+  <li> Mood: <%= @user.mood %> </li>
+  <li> Height: <%= @user.height %></li>
+  <li> Tickets: <%= @user.tickets %> </li>
+</ul>
+<%if @user.admin%>
+  <h4> ADMIN </h4>
+<% end %>
+<%= link_to 'Log Out', signout_path ,method: :post %>
